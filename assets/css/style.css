@@ -173,10 +173,6 @@ table{
 }
 
 /* adding style to radio buttons */
-.radio input[type='radio']{
-    position: absolute;
-    opacity: 0;
-}
 
 .radio input[type='radio'] + .radio-label:before{
     content: "";
