@@ -1,5 +1,5 @@
             <!-- form handling -->
-            <form method="POST" id="add_user">
+            <form action="/api/users" method="POST" id="add_user">
                 <div class="new_user">
                     <div class="form-group">
                         <label for="name" class="text-light">Name</label>
@@ -25,11 +25,11 @@
                     <div class="form-group">
                         <label for="status" class="text-light">Status</label>
                         <div class="radio inline">
-                            <input type="radio" name="gender" value="Active">
+                            <input type="radio" name="status" value="Active">
                             <label for="status" class="text-light">Active</label>
                         </div>
                         <div class="radio inline">
-                            <input type="radio" name="gender" value="Inactive">
+                            <input type="radio" name="status" value="Inactive">
                             <label for="status" class="text-light">Inactive</label>
                         </div>
                     </div>
