@@ -40,7 +40,7 @@ exports.find = (req,res) => {
             }else {
                 res.send(data);
             }        
-        })        
+        })
         .catch(err => {
             res.status(500).send({message: err.message || 'Some error occured while searching for user'});
         });
