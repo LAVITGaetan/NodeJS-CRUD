@@ -23,19 +23,43 @@ user
       res.send(data)
   })
   .catch(err => {
-      res.status(500).send({message : err.message || "SOme error occured while creating the user"});
+      res.status(500).send({message : err.message || "Some error occured while creating the user"});
   });
 
 }
 
 // retrieve multiple or single user
 exports.find = (req,res) => {
-
+    Userdb.find()
+      .then(user => {
+          res.send(user)
+      })
+      .catch(err => {
+          res.status(500).send({message: err.message || 'Some error occured while searching for user'});
+      });
 }
 
 // update selected user with specific id
 exports.update = (req,res) => {
+    // validate request
+    if(!req.body) {
+        return res
+          .status(400)
+          .send({message:'Data to update cannot be empty'});
+    }
+    const id = req.params.id;
 
+    Userdb.findByIdAndUpdate(id, req.body,{useFindAndModify:false})
+      .then(data => {
+          if(!data) {
+              res.status(404).send({message : `Cannot update user with ${id}, not found`});
+          }else {
+              res.send(data);
+          }
+      })
+      .catch(err => {
+        res.status(500).send({message: err.message || 'Some error occured while searching for user'});
+    });
 }
 
 // delete selected user with id in request
