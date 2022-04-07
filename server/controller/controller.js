@@ -28,9 +28,36 @@ user
 
 }
 
-// retrieve multiple or single user
+// retrieve multiple users or single user
 exports.find = (req,res) => {
-    Userdb.find()
+
+    if(req.query.id) {
+        const id = req.query.id;
+        Userdb.findById(id)
+        .then(data =>{   
+            if(!data) {
+                res.status(404).send({message: "Did not found user with id:"+id})
+            }else {
+                res.send(data);
+            }        
+        })        
+        .catch(err => {
+            res.status(500).send({message: err.message || 'Some error occured while searching for user'});
+        });
+    }else {
+        Userdb.find()
+        .then(user => {
+            res.send(user)
+        })
+        .catch(err => {
+            res.status(500).send({message: err.message || 'Some error occured while searching for user'});
+        });
+    }
+}
+
+// retrieve single user
+exports.show = (req,res) => {
+    Userdb.findById(id)
       .then(user => {
           res.send(user)
       })
@@ -72,11 +99,11 @@ Userdb.findByIdAndDelete(id)
       if(!data) {
           res.status(404).send({message : `Cannot delete user with ${id}, not found`});
       }else {
-          res.send(data);
+          res.send('User was deleted!');
       }
   })
   .catch(err => {
-    res.status(500).send({message: err.message || 'Some error occured while searching for user'});
+    res.status(500).send({message: err.message || 'Could not delete user with id:' + id});
 });
 
 }
