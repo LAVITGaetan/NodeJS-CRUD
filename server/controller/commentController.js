@@ -19,7 +19,8 @@ const comment = new Commentdb({
 comment
   .save(comment)
   .then(data => {
-      res.send(data)
+     // res.send(data)
+     res.redirect('/comments')
   })
   .catch(err => {
       res.status(500).send({message : err.message || "Some error occured while creating the comment"});

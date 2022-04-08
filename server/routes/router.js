@@ -41,6 +41,12 @@ route.delete('/api/users/:id', controller.delete);
  */
 route.get('/add-comment',services.add_comment);
 
+/**
+ * @description update comment
+ * @method GET /update-comment
+ */
+ route.get('/update-comment',services.update_comment);
+
 // API comment
 route.post('/api/comments', commentController.create);
 route.get('/api/comments', commentController.find);

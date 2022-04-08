@@ -41,3 +41,13 @@ exports.add_comment = (req, res) => {
     res.render('add_comment');
 
 }
+
+exports.update_comment = (req, res) => {
+    axios.get('http://localhost:3000/api/comments', {params : {id:req.query.id}})
+        .then(function (commentdata) {
+            res.render('update_comment', {comment : commentdata.data});
+        })
+        .catch(err => {
+            res.send(err);
+        })
+}
