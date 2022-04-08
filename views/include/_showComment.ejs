@@ -1,0 +1,19 @@
+<% for(var i =0; i< comments.length; i++) { %>
+
+
+<tr>
+    <td><%= i+1 %></td>
+    <td><%= comments[i].label %></td>
+    <td><%= comments[i].text %></td>
+    <td><%= comments[i].status %></td>
+    <td>
+        <a href="/update-comment?id=<%=comments[i]._id %>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id="<%=comments[i]._id %>">
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+
+<% } %>

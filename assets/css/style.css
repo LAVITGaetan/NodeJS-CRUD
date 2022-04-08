@@ -92,6 +92,7 @@ table{
     border-spacing: 0px;
     width: 100%;
     box-shadow: 0px 10px 10px 1px #00000015;
+    border-radius: 5px;
 }
 
 .table td, .table th{

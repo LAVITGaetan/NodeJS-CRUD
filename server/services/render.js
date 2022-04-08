@@ -29,5 +29,10 @@ exports.update_user = (req, res) => {
 
 
 exports.comments = (req, res) => {
-    res.render('comment');
+
+    axios.get('http://localhost:3000/api/comments')
+    .then(function(commentdata) {
+        res.render('index_comment', {comments : commentdata.data});
+
+    })
 }
