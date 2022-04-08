@@ -59,16 +59,17 @@ a {
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, #E68171, #FFB765);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #header nav{
-    background-color: #06d6a0;
-    padding: 1em 0;
+    background-color: #2b2d42;
+    padding: 3em 0;
     width: 100%;
+
 }
 
 #site-main{
@@ -78,7 +79,9 @@ a {
 
 #site-main .container .box-nav > a{
     font-size: 1em;
-    padding: .5em 1em;
+    padding: .8em 1.6em;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 #site-main .container form{
@@ -88,6 +91,7 @@ a {
 table{
     border-spacing: 0px;
     width: 100%;
+    box-shadow: 0px 10px 10px 1px #00000015;
 }
 
 .table td, .table th{
@@ -101,20 +105,24 @@ table{
     padding: .3em 1em;
     font-size: 1.1em;
     margin: 0 .2em;
+    border-radius: 5px;
 }
 
 .table tr:hover{
-    background-color:#06d6a0 ;
+    transition: .1s ease;
+    background-color:#2b2d4220;
 }
 
 .table tr:hover td > a{
     box-shadow: none;
+    background-color: #fff;
 }
 
 .table .thead-dark th{
     color: #fff;
     background-color: var(--dark) ;
     border-color: #32383e;
+    
 }
 
 @media only screen and (max-width: 1024px){
@@ -193,13 +201,13 @@ table{
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
-    background-color: #16db93;
+    background-color: #FFB765;
     box-shadow: inset 0 0 0 4px #e9ecef;
 }
 
 .radio input[type='radio']:focus + .radio-label:before{
     outline: none;
-    border-color:#16db93;
+    border-color:#FFB765;
 }
 
 .radio input[type='radio']:disabled + .radio-label:before{
@@ -210,19 +218,25 @@ table{
 
 #update_user .form-group .btn,
 #add_user .form-group .btn{
-    width: 100%;
+    transition: .3s ease-in;
+    width: 50%;
     padding: .9em 1em;
-    background-color:#16db93; 
+    background: #FFB765;
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
     cursor: pointer;
     border-radius: .2em;
-    margin: .5em 0;
+    margin: .7em auto;
+    display: block;
+    font-weight: bold;
 }
 
 #update_user .form-group .btn:hover,
 #add_user .form-group .btn:hover{
-    background-color: var(--dark);
-    color: var(--border);
+    cursor: pointer;
+}
+
+.fa-user {
+    margin-left: 10px;
 }

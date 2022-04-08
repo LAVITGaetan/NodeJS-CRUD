@@ -26,3 +26,8 @@ exports.update_user = (req, res) => {
             res.send(err);
         })
 }
+
+
+exports.comments = (req, res) => {
+    res.render('comment');
+}
