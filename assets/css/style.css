@@ -155,18 +155,20 @@ table{
     padding: .5em 0;
 }
 
-.new_user{
+.new_user, .new_comment{
     max-width: 786px;
     margin: auto;
 }
 
 #update_user .form-group,
-#add_user .form-group{
+#add_user .form-group,
+#add_comment .form-group{
     margin: .4em 0;
 }
 
 #update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"]{
+#add_user .form-group input[type="text"],
+    #add_comment .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -177,7 +179,8 @@ table{
 }
 
 #update_user .form-group .radio,
-#add_user .form-group .radio{
+#add_user .form-group .radio,
+    #add_comment .form-group .radio{
     margin: 1em 2em;
 }
 
@@ -218,7 +221,8 @@ table{
 }
 
 #update_user .form-group .btn,
-#add_user .form-group .btn{
+#add_user .form-group .btn,
+    #add_comment .form-group .btn{
     transition: .3s ease-in;
     width: 50%;
     padding: .9em 1em;

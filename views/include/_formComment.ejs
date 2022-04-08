@@ -1,0 +1,30 @@
+            <!-- form handling -->
+            <form action="/api/comments" method="POST" id="add_comment">
+                <div class="new_comment">
+                    <div class="form-group">
+                        <label for="name" class="text-light">Label</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="label" value="" placeholder="Titre du commentaire">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="text-light">Contenu</label>
+                        <input type="text" name="text" value="" placeholder="Lorem ipsum sin dolor..">
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="text-light">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" name="status" value="Active">
+                            <label for="status" class="text-light">Active</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" name="status" value="Inactive">
+                            <label for="status" class="text-light">Inactive</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+                </div>
+            </form>
+            <!-- /form handling -->

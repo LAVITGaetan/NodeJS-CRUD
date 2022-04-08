@@ -36,3 +36,8 @@ exports.comments = (req, res) => {
 
     })
 }
+
+exports.add_comment = (req, res) => {
+    res.render('add_comment');
+
+}

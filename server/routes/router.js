@@ -18,7 +18,7 @@ route.get('/',services.homeRoutes);
 route.get('/add-user',services.add_user);
 
 /**
- * @description update users
+ * @description update user
  * @method GET /update-user
  */
 route.get('/update-user',services.update_user);
@@ -34,6 +34,12 @@ route.delete('/api/users/:id', controller.delete);
  * @method GET /
  */
  route.get('/comments',services.comments);
+
+ /**
+ * @description add comment
+ * @method GET /add-comment
+ */
+route.get('/add-comment',services.add_comment);
 
 // API comment
 route.post('/api/comments', commentController.create);
